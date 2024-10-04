@@ -1,0 +1,23 @@
+[
+  {
+    "key" : "recepcionista",
+    "dataUsers": {
+      "user" : "1020464404",
+      "password" : "Siga2023*"
+    }
+  },
+  {
+    "key" : "tecnico_taller",
+    "dataUsers": {
+      "user" : "851016",
+      "password" : "Siga2023*"
+    }
+  },
+  {
+    "key" : "jefe_taller",
+    "dataUsers": {
+      "user" : "1020464402",
+      "password" : "Siga2023*"
+    }
+  }
+]
