@@ -62,15 +62,25 @@ public class IniciarEjecucion implements Task {
                 ScrollToElement.to(BUTTON_CONSULTAR_DESCUENTO),
                 ClickOnElement.on(BUTTON_CONSULTAR_DESCUENTO),
                 WaitUntil.the(BUTTON_CREAR_NOVEDAD_TP, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                Wait.withDuration(2),
+                Wait.withDuration(10),
                 ClickOnElement.on(BUTTON_CREAR_NOVEDAD_TP),
                 Switch.toDefaultContext(),
                 ClickOnElement.on(BUTTON_CONFIRMAR),
-                Wait.withDuration(20),
-                Switch.toDefaultContext(),
-                ClickOnElement.on(RegistrarRecepcionPage.BUTTON_CONFIRMAR),
                 Wait.withDuration(10),
-                JavaScriptClick.on(BUTTON_CERRAR_POPUP)
+                JavaScriptClick.on(BUTTON_CERRAR_POPUP),
+                SwitchIframe.to(IFRAME_DOS),
+                ClickOnElement.on(TEXTBOX_MOTIVO_DETENCION),
+                EnterText.intoField("fin de jornada",TEXTBOX_MOTIVO_DETENCION),
+                Wait.withDuration(5),
+                Hit.the(Keys.ARROW_DOWN).into(TEXTBOX_MOTIVO_DETENCION),
+                Hit.the(Keys.ENTER).into(TEXTBOX_MOTIVO_DETENCION),
+                ClickOnElement.on(BUTTON_DETENET_EJECUCION),
+                Switch.toDefaultContext(),
+                ClickOnElement.on(BUTTON_CONFIRMAR),
+                Wait.withDuration(20)
+
+
+
 
         );
     }

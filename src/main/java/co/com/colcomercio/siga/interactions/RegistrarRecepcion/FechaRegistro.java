@@ -23,7 +23,7 @@ public class FechaRegistro implements Interaction {
         actor.attemptsTo(
                 WaitUntil.the(TEXTBOX_FECHA_ENTREGA, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(TEXTBOX_FECHA_ENTREGA),
-                EnterText.intoField("8/10/2024",TEXTBOX_FECHA_ENTREGA),
+                EnterText.intoField("10/10/2024",TEXTBOX_FECHA_ENTREGA),
                 Hit.the(Keys.ENTER).into(TEXTBOX_FECHA_ENTREGA),
                 EnterText.intoField("Vehiculo para revisar robot",TEXTBOX_CONDICION)
         );

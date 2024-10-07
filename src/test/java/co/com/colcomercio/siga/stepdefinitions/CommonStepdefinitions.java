@@ -1,6 +1,7 @@
 package co.com.colcomercio.siga.stepdefinitions;
 
 import co.com.colcomercio.siga.models.users.Users;
+import co.com.colcomercio.siga.tasks.ConsultaChasisEntregado;
 import co.com.colcomercio.siga.tasks.Login;
 import co.com.colcomercio.siga.utils.GetDataModel;
 import io.cucumber.java.After;
@@ -32,6 +33,7 @@ public class CommonStepdefinitions {
         dataUser = GetDataModel.user(usuario);
         theActorCalled("actor").wasAbleTo(
                 Open.browserOn().  thePageNamed("pages.siga"),
+                ConsultaChasisEntregado.consulta(),
                 Login.addCredentials(dataUser)
         );
     }

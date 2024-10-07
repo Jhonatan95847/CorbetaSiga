@@ -28,6 +28,7 @@ public class MenuOptions implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("#########################SELECCI#########################");
         actor.attemptsTo(
+                Wait.withDuration(10),
                 WaitUntil.the(BUTTON_MENU, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_MENU),
                 ClickOnElement.on(MENU_OPTION.of(menu)),

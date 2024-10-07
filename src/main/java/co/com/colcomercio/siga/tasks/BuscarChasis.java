@@ -23,7 +23,7 @@ public class BuscarChasis implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 WaitUntil.the(TEXTBOX_SERIE_CHASIS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                EnterText.intoField("9G4B2MBV2LPC00991",TEXTBOX_SERIE_CHASIS),
+                EnterText.intoField("9G4B2MBV4GPC00142",TEXTBOX_SERIE_CHASIS),
                 ClickOnElement.on(BUTTON_BUSCAR_VEHICULO) //button[@class="btn-close"]
 
         );
