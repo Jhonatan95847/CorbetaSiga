@@ -27,10 +27,12 @@ Característica: Generar OT
     Dado que el usuario inicia sesion como "tecnico_taller"
     Y en el menu selecciona "Taller" y el submenu "Ejecución Orden Trabajo"
     Cuando el usuario busca el chasis para el caso y selecciona la accion "Procesar Ejecución"
-    Y ejecuto la accion "crear novedad TP"
-    #Y diligencio el formulario agregando los detalles y creo la novedad TP
-    #Entonces se crea la novedad TP
+    Y ejecuto la accion "Crear Novedad TP"
+    Y diligencio el formulario agregando los detalles y creo la novedad TP
+    Entonces se crea la novedad TP
 
-    #Dado que el usuario inicia sesion como "validador"
-    #Y en el menu selecciona "Novedad" y el submenu "Novedad TP"
-    #Cuando el usuario busca el chasis para el caso y selecciona la accion "Ejecutar accion"
+    Dado que el usuario inicia en siga sesion como "validador"
+    Y en el menu selecciona "Novedad" y el submenu "Novedad TP"
+    Cuando el usuario busca el chasis para el caso y selecciona la accion "Ejecutar Acción"
+    Y edita y vlaida la novedad TP
+    Entonces la novedad TP queda en estado validada

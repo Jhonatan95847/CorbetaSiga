@@ -19,5 +19,12 @@
       "user" : "1020464402",
       "password" : "Siga2023*"
     }
+  },
+  {
+    "key" : "validador",
+    "dataUsers": {
+      "user" : "186474",
+      "password" : "Siga2023*"
+    }
   }
 ]

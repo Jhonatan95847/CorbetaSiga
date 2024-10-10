@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.siga.userinterfaces.SideMenu.*;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class MenuOptions implements Task {
@@ -26,9 +27,9 @@ public class MenuOptions implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        logger.info("#########################SELECCI#########################");
+        logger.info("#########################SELECCIONANDO LA OPCION EN EL MENU#########################");
         actor.attemptsTo(
-                Wait.withDuration(10),
+                Wait.withDuration(MICRO_TIME),
                 WaitUntil.the(BUTTON_MENU, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_MENU),
                 ClickOnElement.on(MENU_OPTION.of(menu)),

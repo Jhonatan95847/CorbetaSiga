@@ -4,6 +4,7 @@ import co.com.colcomercio.siga.interactions.ClickOnElement;
 import co.com.colcomercio.siga.interactions.EnterText;
 import co.com.colcomercio.siga.interactions.ScrollToElement;
 import co.com.colcomercio.siga.interactions.Wait;
+import co.com.colcomercio.siga.utils.DateGenerator;
 import co.com.colcomercio.siga.utils.SwitchIframe;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
@@ -23,7 +24,7 @@ public class FechaRegistro implements Interaction {
         actor.attemptsTo(
                 WaitUntil.the(TEXTBOX_FECHA_ENTREGA, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(TEXTBOX_FECHA_ENTREGA),
-                EnterText.intoField("10/10/2024",TEXTBOX_FECHA_ENTREGA),
+                EnterText.intoField(DateGenerator.getTodayDate(),TEXTBOX_FECHA_ENTREGA),
                 Hit.the(Keys.ENTER).into(TEXTBOX_FECHA_ENTREGA),
                 EnterText.intoField("Vehiculo para revisar robot",TEXTBOX_CONDICION)
         );

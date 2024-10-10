@@ -4,16 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f4f3e5-81f8-42e6-9946-44a6a5d85ab2" name="Changes" comment="SIGA">
+    <list default="true" id="f4f4f3e5-81f8-42e6-9946-44a6a5d85ab2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/LoginValidador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/CrearNovedadTP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/EditarYValidarNovedadTP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/userinterfaces/EditarYValidarNovedadTP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/utils/DateGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/utils/EjecutarConsultaSQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/utils/constantes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/CambiarPropietario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/CambiarPropietario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/DatosVehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/DatosVehiculo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/FechaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/FechaRegistro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/BuscarChasis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/BuscarChasis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/BuscarOT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/BuscarOT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/ConsultaChasisEntregado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/ConsultaChasisEntregado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/MenuOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/MenuOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/AsignarOT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/AsignarOT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/EstadoEntrega.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/EstadoEntrega.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/IniciarEjecucion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/IniciarEjecucion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/utils/ExecuteSQLQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/utils/ExecuteSQLQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/RegistrarRecepcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/RegistrarRecepcion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/userinterfaces/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/userinterfaces/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/userinterfaces/ProcesarEjecucionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/userinterfaces/ProcesarEjecucionPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/siga/stepdefinitions/CommonStepdefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/siga/stepdefinitions/CommonStepdefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/siga/stepdefinitions/FormulariosStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/siga/stepdefinitions/FormulariosStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/siga/stepdefinitions/ResultadosStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/siga/stepdefinitions/ResultadosStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/generarOT.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/generarOT.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +87,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/1049644474/Documents/Automatizacion/Baseautomatizacion/siga-testing-qa",
+    "last_opened_file_path": "C:/Users/1049644474/Documents/Automatizacion/Baseautomatizacion/financiero-testing-qa",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -109,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728055345178</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Flujo hasta iniciar ejecucion, crear Novedad TP y detener ejecucion">
+      <option name="closed" value="true" />
+      <created>1728321051536</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728321051536</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +151,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="SIGA" />
-    <option name="LAST_COMMIT_MESSAGE" value="SIGA" />
+    <MESSAGE value="Flujo hasta iniciar ejecucion, crear Novedad TP y detener ejecucion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flujo hasta iniciar ejecucion, crear Novedad TP y detener ejecucion" />
   </component>
 </project>

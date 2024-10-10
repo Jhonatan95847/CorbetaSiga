@@ -24,14 +24,14 @@ public class AsignarOT implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        logger.info("#####################################ARRASTRANDO ELEMENTO########################");
+        logger.info("#####################################ASIGNAR ORDEN DE TRABAJO########################");
         actor.attemptsTo(
                 SwitchIframe.to(IFRAME_REGISTRAR_RECEPCION),
                 WaitUntil.the(SCROLL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(SCROLL),
                 Wait.withDuration(MICRO_TIME),
                 DefineWorkCell.on("CELDA DOS", "23:30", "00:00"),
-                Wait.withDuration(5),
+                Wait.withDuration(MICRO_TIME),
                 ClickOnElement.on(BUTTON_ASIGNAR_OT),
                 Switch.toDefaultContext(),
                 ClickOnElement.on(BUTTON_CONFIRMAR)

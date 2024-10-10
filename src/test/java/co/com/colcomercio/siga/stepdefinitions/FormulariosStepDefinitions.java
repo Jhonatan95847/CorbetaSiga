@@ -3,10 +3,7 @@ package co.com.colcomercio.siga.stepdefinitions;
 import co.com.colcomercio.siga.interactions.ClickOnElement;
 import co.com.colcomercio.siga.interactions.Wait;
 import co.com.colcomercio.siga.tasks.Login;
-import co.com.colcomercio.siga.tasks.formularios.AsignarOT;
-import co.com.colcomercio.siga.tasks.formularios.EstadoEntrega;
-import co.com.colcomercio.siga.tasks.formularios.IniciarEjecucion;
-import co.com.colcomercio.siga.tasks.formularios.RegistrarRecepcion;
+import co.com.colcomercio.siga.tasks.formularios.*;
 import co.com.colcomercio.siga.userinterfaces.AsignarSolicitud;
 import co.com.colcomercio.siga.utils.GetDataModel;
 import io.cucumber.java.es.Dado;
@@ -39,13 +36,23 @@ public class FormulariosStepDefinitions {
     }
 
     @Y("ejecuto la accion {string}")
-    public void ejecutoLaAccion(String arg0) {
+    public void ejecutoLaAccion(String accion) {
         theActorCalled("actor").wasAbleTo(
-                IniciarEjecucion.iniciar()
+                IniciarEjecucion.iniciar(accion)
         );
     }
 
     @Y("diligencio el formulario agregando los detalles y creo la novedad TP")
     public void diligencioElFormularioAgregandoLosDetallesYCreoLaNovedadTP() {
+        theActorCalled("actor").wasAbleTo(
+                CrearNovedadTP.crear()
+        );
+    }
+
+    @Y("edita y vlaida la novedad TP")
+    public void editaYVlaidaLaNovedadTP() {
+        theActorCalled("actor").wasAbleTo(
+                EditarYValidarNovedadTP.editar()
+        );
     }
 }

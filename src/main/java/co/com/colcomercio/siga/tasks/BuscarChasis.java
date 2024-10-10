@@ -21,9 +21,11 @@ public class BuscarChasis implements Task {
     private static final Logger logger = LogManager.getLogger(BuscarChasis.class);
     @Override
     public <T extends Actor> void performAs(T actor) {
+        String queryResult = actor.recall("queryResult");
+        logger.info("###########################BUSCANDO CHASIS##################################");
         actor.attemptsTo(
                 WaitUntil.the(TEXTBOX_SERIE_CHASIS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                EnterText.intoField("9G4B2MBV4GPC00142",TEXTBOX_SERIE_CHASIS),
+                EnterText.intoField(queryResult,TEXTBOX_SERIE_CHASIS),
                 ClickOnElement.on(BUTTON_BUSCAR_VEHICULO) //button[@class="btn-close"]
 
         );

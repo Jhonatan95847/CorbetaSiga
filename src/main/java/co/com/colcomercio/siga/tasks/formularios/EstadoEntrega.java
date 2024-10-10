@@ -12,6 +12,8 @@ import net.serenitybdd.screenplay.actions.Hit;
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 
 import static co.com.colcomercio.siga.userinterfaces.EstadoEntregaPage.*;
@@ -23,8 +25,11 @@ import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class EstadoEntrega implements Task {
+    private static final Logger logger = LogManager.getLogger(EstadoEntrega.class);
+
     @Override
     public <T extends Actor> void performAs(T actor) {
+        logger.info("#########################DILIGENCIANDO FORMULARIO ESTADO DE ENTREGA#################");
         actor.attemptsTo(
                 Wait.withDuration(MICRO_TIME),
                 SwitchIframe.to(IFRAME_REGISTRAR_RECEPCION),

@@ -17,6 +17,7 @@ import org.openqa.selenium.WebElement;
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.*;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
 import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
+import static co.com.colcomercio.siga.utils.constantes.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class DatosVehiculo implements Interaction {
@@ -28,13 +29,13 @@ public class DatosVehiculo implements Interaction {
                 WaitUntil.the(TEXTBOX_TALLER_CLICK, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(TEXTBOX_TALLER_CLICK),
                 ScrollToElement.to(TEXTBOX_TALLER),
-                EnterText.intoField("fofat",TEXTBOX_TALLER),
+                EnterText.intoField(taller,TEXTBOX_TALLER),
                 Hit.the(Keys.ENTER).into(TEXTBOX_TALLER),
                 Wait.withDuration(MICRO_TIME),
-                EnterText.intoField("250000",TEXTBOX_KILOMETRAJE),
-                Wait.withDuration(MICRO_TIME),
-                EnterText.intoField("4",TEXTBOX_HORAS),
-                Hit.the(Keys.ENTER).into(TEXTBOX_HORAS)
+                EnterText.intoField(kilometraje,TEXTBOX_KILOMETRAJE),
+                Wait.withDuration(5),
+                WaitUntil.the(TEXTBOX_HORAS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                EnterText.intoField(horas,TEXTBOX_HORAS)
         );
     }
     public static DatosVehiculo addData(){return Tasks.instrumented(DatosVehiculo.class);

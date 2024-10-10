@@ -14,14 +14,13 @@ import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.siga.userinterfaces.LoginPage.*;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
-import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class Login implements Task {
-    private static final Logger logger = LogManager.getLogger(Login.class);
+public class LoginValidador implements Task {
+    private static final Logger logger = LogManager.getLogger(LoginValidador.class);
     private final Users users;
 
-    public Login(Users users) {
+    public LoginValidador(Users users) {
         this.users = users;
     }
 
@@ -33,11 +32,9 @@ public class Login implements Task {
                 EnterText.intoField(users.getDataUsers().getUser(),TEXTBOX_USER),
                 EnterText.intoField(users.getDataUsers().getPassword(),TEXTBOX_PASS),
                 ClickOnElement.on(BUTTON_LOGIN),
-                WaitUntil.the(SELECT_UNIDAD_NEGOCIO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                Wait.withDuration(MICRO_TIME),
-                SelectFromOptions.byVisibleText("CORAUTOS").from(SELECT_UNIDAD_NEGOCIO)
+                Wait.withDuration(5)
         );
     }
 
-    public static Login addCredentials(Users users){return Tasks.instrumented(Login.class, users);}
+    public static LoginValidador addCredentials(Users users){return Tasks.instrumented(LoginValidador.class, users);}
 }

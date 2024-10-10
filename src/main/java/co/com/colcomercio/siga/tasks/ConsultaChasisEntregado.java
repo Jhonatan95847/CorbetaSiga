@@ -19,15 +19,23 @@ public class ConsultaChasisEntregado implements Task {
                         "siga-pre-db",        // Base de datos o schema
                         "dbusrsigapreqa",            // Usuario
                         "PasswordQA2017*",  // Contraseña
-                        "SELECT TOP 1 VehiculoSerieChasis, EstadoNombre FROM Vehiculo.Vehiculo\n" +
+                        "SELECT TOP 1 VehiculoSerieChasis, ReferenciaUnicaId, VehiculoPSEAN, EstadoNombre, EjecucionProcesoFechaBloqueo, EjecucionProceso.EjecucionProcesoId, ReferenciaNombre, ReferenciaCodigoInt, MarcaNombre, VehiculoSerieMotor FROM Vehiculo.Vehiculo\n" +
+                                "      INNER JOIN Vehiculo.VehiculoPS\n" +
+                                "      ON Vehiculo.VehiculoPSId=VehiculoPS.VehiculoPSId\n" +
+                                "      INNER JOIN Vehiculo.Referencia\n" +
+                                "      ON VehiculoPS.ReferenciaId=Referencia.ReferenciaId\n" +
+                                "      INNER JOIN Vehiculo.Marca\n" +
+                                "      ON Referencia.MarcaId=Marca.MarcaId\n" +
                                 "      INNER JOIN Procesos.EjecucionProceso\n" +
                                 "      ON Vehiculo.EjecucionProcesoId=EjecucionProceso.EjecucionProcesoId\n" +
                                 "      INNER JOIN Procesos.Estado_Proceso\n" +
                                 "      ON EjecucionProceso.Estado_ProcesoId=Estado_Proceso.Estado_ProcesoId\n" +
                                 "      INNER JOIN Procesos.Estado\n" +
                                 "     ON Estado.EstadoId= Estado_Proceso.EstadoId\n" +
-                                "\twhere EstadoNombre IN ('entregado')\n" +
-                                "  order by EjecucionProcesoFechaBloqueo desc" // Consulta SQL
+                                "--WHERE vehiculo.vehiculoSerieChasis='9G4B2MBV6LPC01125'\n" +
+                                "--where marca.UnidadNegocioId=1 and EstadoNombre IN ('despachado')  AND Referencia.ReferenciaNombre like '%TTR%' --Akt \n" +
+                                "where marca.UnidadNegocioId=2 and EstadoNombre IN ('entregado')  AND Referencia.ReferenciaNombre like '%BJ2037%' --(Corautos) \n" +
+                                "  order by EjecucionProcesoFechaBloqueo asc" // Consulta SQL
                 )
         );
         String queryResult = actor.recall("queryResult");

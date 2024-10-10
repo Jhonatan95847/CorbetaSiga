@@ -11,6 +11,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import static co.com.colcomercio.siga.userinterfaces.BusquedaVehiculoPage.TEXTBOX_OT_CHASIS;
 import static co.com.colcomercio.siga.userinterfaces.LoginPage.BUTTON_CERRAR_SESION;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
@@ -19,9 +20,10 @@ public class ResultadosStepDefinitions {
     public void queUnAsesorPqrDeseaAccederAlCrmAlkomprar() {
         theActorCalled("actor").wasAbleTo(
                 Switch.toDefaultContext(),
+                Wait.withDuration(5),
                 WaitUntil.the(BUTTON_CERRAR_SESION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_CERRAR_SESION),
-                Wait.withDuration(10)
+                Wait.withDuration(MICRO_TIME)
         );
     }
 
@@ -29,12 +31,25 @@ public class ResultadosStepDefinitions {
     public void laOrdenDeTrabajoPasaAEstadoEnEjecucion() {
         theActorCalled("actor").wasAbleTo(
                 Switch.toDefaultContext(),
+                Wait.withDuration(5),
                 WaitUntil.the(BUTTON_CERRAR_SESION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                ClickOnElement.on(BUTTON_CERRAR_SESION)
+                ClickOnElement.on(BUTTON_CERRAR_SESION),
+                Wait.withDuration(MICRO_TIME)
         );
     }
 
     @Entonces("se crea la novedad TP")
     public void seCreaLaNovedadTP() {
+        theActorCalled("actor").wasAbleTo(
+                Switch.toDefaultContext(),
+                Wait.withDuration(5),
+                WaitUntil.the(BUTTON_CERRAR_SESION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                ClickOnElement.on(BUTTON_CERRAR_SESION),
+                Wait.withDuration(MICRO_TIME)
+        );
+    }
+
+    @Entonces("la novedad TP queda en estado validada")
+    public void laNovedadTPQuedaEnEstadoValidada() {
     }
 }

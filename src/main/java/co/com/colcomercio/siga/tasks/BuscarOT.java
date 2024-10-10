@@ -18,12 +18,15 @@ import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class BuscarOT implements Task {
+
     private static final Logger logger = LogManager.getLogger(BuscarOT.class);
     @Override
     public <T extends Actor> void performAs(T actor) {
+        String queryResult = actor.recall("queryResult");
+        logger.info("##########################BUSCAR ORDEN DE TRABAJO##########################");
         actor.attemptsTo(
                 WaitUntil.the(TEXTBOX_OT_CHASIS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                EnterText.intoField("9G4B2MBV4GPC00142",TEXTBOX_OT_CHASIS),
+                EnterText.intoField(queryResult,TEXTBOX_OT_CHASIS),
                 Wait.withDuration(5),
                 Hit.the(Keys.ARROW_DOWN).into("//body"),
                 Wait.withDuration(5),
