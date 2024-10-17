@@ -7,8 +7,8 @@ import org.openqa.selenium.By;
 public class RegistrarRecepcionPage extends PageObject {
     public static final Target IFRAME_REGISTRAR_RECEPCION =Target.the("Iframe regitrar recepcion").locatedBy("//iframe");
     public static final Target IFRAME_DOS =Target.the("Iframe dos").locatedBy("//div[@class=\"carousel-item active\"]//iframe");
-    public static final Target IFRAME_REGISTRAR_RECEPCIONDOS =Target.the("Iframe regitrar recepcion").locatedBy("//div[@class=\"nav carousel-inner\"]//div[@class=\"carousel-item active\"]//iframe");
-    public static final Target IFRAME_REGISTRAR_RECEPCIONTRES =Target.the("Iframe regitrar recepcion").locatedBy("//div[@class=\"nav carousel-inner\"]//div[@class=\"carousel-item active\"]//iframe");
+    public static final Target IFRAME_REGISTRAR_RECEPCIONDOS =Target.the("Iframe regitrar recepcion dos").locatedBy("//div[@class=\"nav carousel-inner\"]//div[@class=\"carousel-item active\"]//iframe");
+    public static final Target IFRAME_REGISTRAR_RECEPCIONTRES =Target.the("Iframe regitrar recepcio").locatedBy("//div[@class=\"nav carousel-inner\"]//div[@class=\"carousel-item active\"]//iframe");
     public static final Target BUTTON_REGISTRAR_RECEPCION =Target.the("Boton regitrar recepcion").located(By.xpath("//button[@id=\"btnEjecutarAccion\"]"));
     public static final Target BUTTON_CONFIRMAR =Target.the("Boton confirmar").located(By.xpath("//button[contains(text(),'Confirmar')]"));
     public static final Target TEXTBOX_FECHAVIGENCIA =Target.the("Campo de texto vigencia").located(By.xpath("//input[@id=\"txtVehiculoClienteFechaVigenciaInicial\"]"));
@@ -18,6 +18,7 @@ public class RegistrarRecepcionPage extends PageObject {
 
     //Datos vehiculo
     public static final Target TEXTBOX_TALLER =Target.the("Campo de texto taller").located(By.xpath("//div[@id=\"ddlTallerId_chosen\"]//input"));
+    public static final Target TEXTBOX_PLACA =Target.the("Campo de texto placa").located(By.xpath("//input[@name=\"ctl00$cprPrincipal$tbxVehiculoPlaca\"]"));
     public static final Target TEXTBOX_TALLER_CLICK =Target.the("Campo de texto taller click").located(By.xpath("//div[@id=\"ddlTallerId_chosen\"]"));
     public static final Target TEXTBOX_KILOMETRAJE =Target.the("Campo de texto kilometraje").located(By.xpath("//input[@id=\"tbxRecepcionVehiculoTallerKilometrajeActual\"]"));
     public static final Target TEXTBOX_HORAS =Target.the("Campo de texto horas").located(By.xpath("//input[@id=\"tbxRecepcionVehiculoTallerHoras\"]"));

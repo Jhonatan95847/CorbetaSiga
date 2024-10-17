@@ -1,11 +1,8 @@
 package co.com.colcomercio.siga.stepdefinitions;
 
-import co.com.colcomercio.siga.tasks.Login;
+
 import co.com.colcomercio.siga.tasks.MenuOptions;
-import co.com.colcomercio.siga.utils.GetDataModel;
 import io.cucumber.java.an.Y;
-import io.cucumber.java.es.Dado;
-import net.serenitybdd.screenplay.actions.Open;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 

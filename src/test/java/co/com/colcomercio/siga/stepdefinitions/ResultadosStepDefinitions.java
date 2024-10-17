@@ -2,13 +2,10 @@ package co.com.colcomercio.siga.stepdefinitions;
 
 import co.com.colcomercio.siga.interactions.ClickOnElement;
 import co.com.colcomercio.siga.interactions.Wait;
-import co.com.colcomercio.siga.tasks.MenuOptions;
-import io.cucumber.java.an.Y;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static co.com.colcomercio.siga.userinterfaces.BusquedaVehiculoPage.TEXTBOX_OT_CHASIS;
 import static co.com.colcomercio.siga.userinterfaces.LoginPage.BUTTON_CERRAR_SESION;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
 import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
@@ -51,5 +48,9 @@ public class ResultadosStepDefinitions {
 
     @Entonces("la novedad TP queda en estado validada")
     public void laNovedadTPQuedaEnEstadoValidada() {
+        theActorCalled("actor").wasAbleTo(
+                Switch.toDefaultContext(),
+                Wait.withDuration(5)
+        );
     }
 }

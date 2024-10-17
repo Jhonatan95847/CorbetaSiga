@@ -2,7 +2,6 @@ package co.com.colcomercio.siga.tasks;
 
 import co.com.colcomercio.siga.interactions.ClickOnElement;
 import co.com.colcomercio.siga.interactions.Wait;
-import co.com.colcomercio.siga.questions.WaitUntilElementIsNotPresent;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

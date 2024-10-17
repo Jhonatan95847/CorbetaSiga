@@ -1,9 +1,6 @@
 package co.com.colcomercio.siga.tasks.formularios;
 
-import co.com.colcomercio.siga.interactions.ClickOnElement;
-import co.com.colcomercio.siga.interactions.EnterText;
-import co.com.colcomercio.siga.interactions.ScrollToElement;
-import co.com.colcomercio.siga.interactions.Wait;
+import co.com.colcomercio.siga.interactions.*;
 import co.com.colcomercio.siga.utils.SwitchIframe;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -27,6 +24,7 @@ public class CrearNovedadTP implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                Wait.withDuration(MICRO_TIME),
                 SwitchIframe.to(IFRAME_DOS),
                 WaitUntil.the(TEXTBOX_AGREGAR_TECICO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 Wait.withDuration(MICRO_TIME),
@@ -36,37 +34,30 @@ public class CrearNovedadTP implements Task {
                 ClickOnElement.on(TAP_PARTES),
                 WaitUntil.the(SELECT_COTIZACION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 SelectFromOptions.byValue("False").from(SELECT_COTIZACION),
-                WaitUntil.the(TEXTBOX_TIPO_DE_ORDEN, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                AgregarPartes.agrgar("Repuesto","7701023119092","2","0"),
+                ClickOnElement.on(BUTTON_AGREGAR_PARTE),
                 Wait.withDuration(MICRO_TIME),
-                ClickOnElement.on(TEXTBOX_TIPO_DE_ORDEN),
+                AgregarPartes.agrgar("Sustituto","7701023453509","3","1"),
+                ClickOnElement.on(BUTTON_AGREGAR_PARTE),
                 Wait.withDuration(MICRO_TIME),
-                EnterText.intoField("Repuesto",TEXTBOX_TIPO_DE_ORDEN),
-                Wait.withDuration(5),
-                Hit.the(Keys.ENTER).into(TEXTBOX_TIPO_DE_ORDEN),
-                Wait.withDuration(MICRO_TIME),
-                ClickOnElement.on(TEXTBOX_AGREGAR_PARTE),
-                EnterText.intoField("7701023119092",TEXTBOX_AGREGAR_PARTE),
-                Wait.withDuration(5),
-                Hit.the(Keys.ARROW_DOWN).into(TEXTBOX_AGREGAR_PARTE),
-                Hit.the(Keys.ENTER).into(TEXTBOX_AGREGAR_PARTE),
-                EnterText.intoField("2",TEXTBOX_CANTIDAD),
-                Wait.withDuration(MICRO_TIME),
+                AgregarPartes.agrgar("Servicio","Balanceo X Llanta","400","2"),
                 WaitUntil.the(BUTTON_CONSULTAR_DESCUENTO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(BUTTON_CONSULTAR_DESCUENTO),
                 ClickOnElement.on(BUTTON_CONSULTAR_DESCUENTO),
                 WaitUntil.the(BUTTON_CREAR_NOVEDAD_TP, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                Wait.withDuration(10),
-                ClickOnElement.on(BUTTON_CREAR_NOVEDAD_TP),
                 Wait.withDuration(5),
+                ClickOnElement.on(BUTTON_CREAR_NOVEDAD_TP),
+                Wait.withDuration(3),
                 Switch.toDefaultContext(),
                 ClickOnElement.on(BUTTON_CONFIRMAR),
-                Wait.withDuration(5),
+                Wait.withDuration(3),
+                GetText.ofElement(TEXTO_NUMERO_NOVEDADTP,"NovedadTP"),
                 JavaScriptClick.on(BUTTON_CERRAR_POPUP),
                 SwitchIframe.to(IFRAME_DOS),
                 WaitUntil.the(TEXTBOX_MOTIVO_DETENCION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(TEXTBOX_MOTIVO_DETENCION),
                 EnterText.intoField("fin de jornada",TEXTBOX_MOTIVO_DETENCION),
-                Wait.withDuration(5),
+                Wait.withDuration(3),
                 Hit.the(Keys.ARROW_DOWN).into(TEXTBOX_MOTIVO_DETENCION),
                 Hit.the(Keys.ENTER).into(TEXTBOX_MOTIVO_DETENCION),
                 Wait.withDuration(MICRO_TIME),

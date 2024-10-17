@@ -7,8 +7,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static co.com.colcomercio.siga.userinterfaces.OpcionesTuercaPage.BUTTON_TUERCA;
-import static co.com.colcomercio.siga.userinterfaces.OpcionesTuercaPage.SELECT_OPCIONES_TUERCA;
+import static co.com.colcomercio.siga.userinterfaces.OpcionesTuercaPage.*;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
 import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;

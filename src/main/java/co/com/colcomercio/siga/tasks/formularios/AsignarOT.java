@@ -26,6 +26,7 @@ public class AsignarOT implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("#####################################ASIGNAR ORDEN DE TRABAJO########################");
         actor.attemptsTo(
+                Wait.withDuration(MICRO_TIME),
                 SwitchIframe.to(IFRAME_REGISTRAR_RECEPCION),
                 WaitUntil.the(SCROLL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ScrollToElement.to(SCROLL),

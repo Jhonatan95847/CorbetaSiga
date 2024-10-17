@@ -46,7 +46,6 @@ public class RegistrarRecepcion implements Task {
         actor.attemptsTo(
                 ScrollToElement.to(CHECK_MISMO_PROPIETARIO),
                 ClickOnElement.on(CHECK_MISMO_PROPIETARIO),
-                //DatosConductor.addConductor(),
                 Wait.withDuration(MICRO_TIME),
                 ScrollToElement.to(BUTTON_REGISTRAR_RECEPCION),
                 ClickOnElement.on(BUTTON_REGISTRAR_RECEPCION),

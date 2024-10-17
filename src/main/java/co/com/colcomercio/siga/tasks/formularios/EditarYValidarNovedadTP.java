@@ -20,21 +20,21 @@ public class EditarYValidarNovedadTP implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Wait.withDuration(10),
-
                 ClickOnElement.on(BUTTON_EDITAR_VALIDAR),
                 SwitchIframe.to(IFRAME_REGISTRAR_RECEPCION),
                 WaitUntil.the(BUTTON_PARTES, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_PARTES),
                 WaitUntil.the(BUTTON_CONTINUAR_DESCUENTOS_COMPROMETIDOS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                Wait.withDuration(10),
+                Wait.withDuration(5),
                 ScrollToElement.to(BUTTON_CONTINUAR_DESCUENTOS_COMPROMETIDOS),
                 ClickOnElement.on(BUTTON_CONTINUAR_DESCUENTOS_COMPROMETIDOS),
                 WaitUntil.the(BUTTON_EDITAR_VALIDAR_FINAL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                Wait.withDuration(5),
                 ScrollToElement.to(BUTTON_EDITAR_VALIDAR_FINAL),
                 ClickOnElement.on(BUTTON_EDITAR_VALIDAR_FINAL),
                 Switch.toDefaultContext(),
-                ClickOnElement.on(BUTTON_CONFIRMAR),Wait.withDuration(15)
+                ClickOnElement.on(BUTTON_CONFIRMAR),
+                Wait.withDuration(3)
         );
     }
 

@@ -57,7 +57,6 @@ public class DefineWorkCell implements Interaction {
                 jsExecutor.executeScript(General.ARGUMENTS.getMsj(), INPUT_MAXIMUM_TIME.resolveFor(actor).getElement(), actualDateFormatted + " " + maximumTime);
                 break;
             default:
-                //mensaje().info("Opción no encontrada !!");
 
         }
         jsExecutor.executeScript("arguments[0].value='true';", CHECK_EVENT.resolveFor(actor).getElement());

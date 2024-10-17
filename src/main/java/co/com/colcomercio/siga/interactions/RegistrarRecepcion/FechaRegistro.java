@@ -1,16 +1,12 @@
 package co.com.colcomercio.siga.interactions.RegistrarRecepcion;
 
-import co.com.colcomercio.siga.interactions.ClickOnElement;
 import co.com.colcomercio.siga.interactions.EnterText;
 import co.com.colcomercio.siga.interactions.ScrollToElement;
-import co.com.colcomercio.siga.interactions.Wait;
 import co.com.colcomercio.siga.utils.DateGenerator;
-import co.com.colcomercio.siga.utils.SwitchIframe;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Hit;
-import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
 

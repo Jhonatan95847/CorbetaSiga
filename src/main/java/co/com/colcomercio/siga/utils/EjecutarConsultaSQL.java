@@ -3,8 +3,6 @@ package co.com.colcomercio.siga.utils;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.annotations.Subject;
-
 
 import java.sql.Connection;
 import java.sql.DriverManager;

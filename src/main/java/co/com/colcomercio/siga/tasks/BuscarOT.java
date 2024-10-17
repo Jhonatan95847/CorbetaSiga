@@ -13,7 +13,6 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 
 import static co.com.colcomercio.siga.userinterfaces.BusquedaVehiculoPage.*;
-import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.TEXTBOX_TALLER;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 

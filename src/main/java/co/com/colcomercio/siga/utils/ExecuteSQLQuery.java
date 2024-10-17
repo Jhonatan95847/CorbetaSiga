@@ -1,11 +1,8 @@
 package co.com.colcomercio.siga.utils;
 
-import co.com.colcomercio.siga.tasks.Login;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.annotations.Subject;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

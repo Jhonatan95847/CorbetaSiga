@@ -9,10 +9,8 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Hit;
-import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.*;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
@@ -31,10 +29,14 @@ public class DatosVehiculo implements Interaction {
                 ScrollToElement.to(TEXTBOX_TALLER),
                 EnterText.intoField(taller,TEXTBOX_TALLER),
                 Hit.the(Keys.ENTER).into(TEXTBOX_TALLER),
+                //Wait.withDuration(MICRO_TIME),
+                //EnterText.intoField("AS",TEXTBOX_PLACA),
+                WaitUntil.the(TEXTBOX_KILOMETRAJE, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 Wait.withDuration(MICRO_TIME),
                 EnterText.intoField(kilometraje,TEXTBOX_KILOMETRAJE),
-                Wait.withDuration(5),
                 WaitUntil.the(TEXTBOX_HORAS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                ClickOnElement.on(TEXTBOX_HORAS),
+                Wait.withDuration(MICRO_TIME),
                 EnterText.intoField(horas,TEXTBOX_HORAS)
         );
     }

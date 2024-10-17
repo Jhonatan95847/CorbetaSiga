@@ -19,7 +19,6 @@ import org.openqa.selenium.Keys;
 import static co.com.colcomercio.siga.userinterfaces.EstadoEntregaPage.*;
 import static co.com.colcomercio.siga.userinterfaces.EstadoEntregaPage.BUTTON_CONFIRMAR;
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.*;
-import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.TEXTBOX_TALLER;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
 import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
@@ -40,7 +39,6 @@ public class EstadoEntrega implements Task {
                 Hit.the(Keys.ENTER).into(TEXTBOX_MOTIVO_INGRESO),
                 Wait.withDuration(MICRO_TIME),
                 JavaScriptClick.on(CHECK_NIVEL_GAS),
-                //ClickOnElement.on(CHECK_NIVEL_GAS),
                 ClickOnElement.on(CHECK_TODOS_ACCESORIOS),
                 ScrollToElement.to(TEXTBOX_OBSERVACIONES),
                 EnterText.intoField("Vehiculo para mantenimiento autoamtizacion",TEXTBOX_OBSERVACIONES),
@@ -50,7 +48,6 @@ public class EstadoEntrega implements Task {
                 ClickOnElement.on(BUTTON_REGISTRAR_OT),
                 Switch.toDefaultContext(),
                 ClickOnElement.on(BUTTON_CONFIRMAR)
-                //Wait.withDuration(30)
         );
     }
     public static EstadoEntrega estado(){return Tasks.instrumented(EstadoEntrega.class);

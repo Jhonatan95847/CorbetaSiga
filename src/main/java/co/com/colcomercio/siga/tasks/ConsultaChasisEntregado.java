@@ -1,14 +1,18 @@
 package co.com.colcomercio.siga.tasks;
 
 import co.com.colcomercio.siga.utils.ExecuteSQLQuery;
+import co.com.colcomercio.siga.utils.GuardarDatoEnJson;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static co.com.colcomercio.siga.utils.DataGenerator.DataGeneratorDate;
+
 public class ConsultaChasisEntregado implements Task {
-    private static final Logger logger = LogManager.getLogger(ExecuteSQLQuery.class);
+    private static final Logger logger = LogManager.getLogger(ConsultaChasisEntregado.class);
+    String idKey = DataGeneratorDate();
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -39,7 +43,8 @@ public class ConsultaChasisEntregado implements Task {
                 )
         );
         String queryResult = actor.recall("queryResult");
-        logger.info("El resultado de la consulta es: "+queryResult);
+        logger.info("=============El resultado de la consulta es: "+queryResult);
+        GuardarDatoEnJson.guardarDatoEnJson("serieChasis"+idKey,queryResult,"C:\\Users\\1049644474\\Documents\\Automatizacion\\Baseautomatizacion\\siga-testing-qa\\src\\ot.json");
     }
     public static ConsultaChasisEntregado consulta(){return Tasks.instrumented(ConsultaChasisEntregado.class);
     }
