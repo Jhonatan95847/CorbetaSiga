@@ -11,6 +11,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
 
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.*;
+import static co.com.colcomercio.siga.utils.Constantes.CONDICION_VEHICULO;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
@@ -22,7 +23,7 @@ public class FechaRegistro implements Interaction {
                 ScrollToElement.to(TEXTBOX_FECHA_ENTREGA),
                 EnterText.intoField(DateGenerator.getTodayDate(),TEXTBOX_FECHA_ENTREGA),
                 Hit.the(Keys.ENTER).into(TEXTBOX_FECHA_ENTREGA),
-                EnterText.intoField("Vehiculo para revisar robot",TEXTBOX_CONDICION)
+                EnterText.intoField(CONDICION_VEHICULO,TEXTBOX_CONDICION)
         );
     }
     public static FechaRegistro addFecha(){return Tasks.instrumented(FechaRegistro.class);

@@ -8,7 +8,7 @@ public class EditarYValidarNovedadTP extends PageObject {
     public static final Target BUTTON_EDITAR_VALIDAR =Target.the("Boton editar y validar novedad TP").located(By.xpath("//a[contains(text(),'Editar y Validar')]"));
     public static final Target BUTTON_PARTES =Target.the("Boton partes").located(By.xpath("//*[@id=\"encabezadoTabs\"]/li[2]/a"));
     public static final Target BUTTON_CONTINUAR_DESCUENTOS_COMPROMETIDOS =Target.the("Boton consultar descuentos y comprometidos").located(By.xpath("//button[@id=\"ctl00_cprPrincipal_btnConsultar\"]"));
-    public static final Target BUTTON_EDITAR_VALIDAR_FINAL =Target.the("Boton editar y validar novedad TP final").located(By.xpath("//button[@id=\"btnEjecutarAccion\"]"));
+    public static final Target BUTTON_EDITAR_VALIDAR_FINAL =Target.the("Boton editar y validar novedad TP final").located(By.xpath("//button[contains(text(),'Editar y Validar Novedad TP')]"));
     //estan dentro de in iframe loclizado por //iframe
 
 }

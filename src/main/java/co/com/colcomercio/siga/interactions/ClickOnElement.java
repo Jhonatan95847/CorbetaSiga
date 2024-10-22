@@ -5,8 +5,13 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import static co.com.colcomercio.siga.userinterfaces.EstadoEntregaPage.BUTTON_CONFIRMAR;
+import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 
 public class ClickOnElement implements Interaction {
@@ -27,6 +32,7 @@ public class ClickOnElement implements Interaction {
         if (element.isVisibleFor(actor)){
             logger.info("Hacer click en: " + element);
             actor.attemptsTo(
+                    WaitUntil.the(element, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                     Click.on(element)
             );
         } else {

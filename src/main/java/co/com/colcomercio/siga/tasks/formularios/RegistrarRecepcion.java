@@ -39,6 +39,7 @@ public class RegistrarRecepcion implements Task {
             actor.attemptsTo(
                     CambiarPropietario.cambiar(),
                     Switch.toDefaultContext(),
+                    WaitUntil.the(IFRAME_REGISTRAR_RECEPCION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                     SwitchIframe.to(IFRAME_REGISTRAR_RECEPCION),
                     FechaRegistro.addFecha()
             );
@@ -51,7 +52,6 @@ public class RegistrarRecepcion implements Task {
                 ClickOnElement.on(BUTTON_REGISTRAR_RECEPCION),
                 Wait.withDuration(MICRO_TIME),
                 Switch.toDefaultContext(),
-                WaitUntil.the(BUTTON_CONFIRMAR, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_CONFIRMAR)
         );
     }

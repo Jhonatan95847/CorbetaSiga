@@ -32,16 +32,16 @@ public class CommonStepdefinitions {
         );
     }
 
-    @Dado("que el usuario inicia sesion como {string}")
-    public void queUnAsesorPqrDeseaAccederAlCrmAlkomprar(String usuario) {
+    @Dado("que el usuario inicia sesion como {string} para {string}")
+    public void queUnAsesorPqrDeseaAccederAlCrmAlkomprar(String usuario, String negocio) {
         dataUser = GetDataModel.user(usuario);
         theActorCalled("actor").wasAbleTo(
                 Open.browserOn().thePageNamed("pages.siga"),
-                Login.addCredentials(dataUser)
+                Login.addCredentials(dataUser, negocio)
         );
     }
 
-    @Dado("que el usuario inicia en siga sesion como {string}")
+    @Dado("que el usuario inicia en siga sesion como {string} Corautos")
     public void queElUsuarioIniciaEnSigaSesionComo(String usuario) {
         dataUser = GetDataModel.user(usuario);
         theActorCalled("actor").wasAbleTo(

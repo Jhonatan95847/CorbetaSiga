@@ -8,7 +8,6 @@ public class RegistrarRecepcionPage extends PageObject {
     public static final Target IFRAME_REGISTRAR_RECEPCION =Target.the("Iframe regitrar recepcion").locatedBy("//iframe");
     public static final Target IFRAME_DOS =Target.the("Iframe dos").locatedBy("//div[@class=\"carousel-item active\"]//iframe");
     public static final Target IFRAME_REGISTRAR_RECEPCIONDOS =Target.the("Iframe regitrar recepcion dos").locatedBy("//div[@class=\"nav carousel-inner\"]//div[@class=\"carousel-item active\"]//iframe");
-    public static final Target IFRAME_REGISTRAR_RECEPCIONTRES =Target.the("Iframe regitrar recepcio").locatedBy("//div[@class=\"nav carousel-inner\"]//div[@class=\"carousel-item active\"]//iframe");
     public static final Target BUTTON_REGISTRAR_RECEPCION =Target.the("Boton regitrar recepcion").located(By.xpath("//button[@id=\"btnEjecutarAccion\"]"));
     public static final Target BUTTON_CONFIRMAR =Target.the("Boton confirmar").located(By.xpath("//button[contains(text(),'Confirmar')]"));
     public static final Target TEXTBOX_FECHAVIGENCIA =Target.the("Campo de texto vigencia").located(By.xpath("//input[@id=\"txtVehiculoClienteFechaVigenciaInicial\"]"));

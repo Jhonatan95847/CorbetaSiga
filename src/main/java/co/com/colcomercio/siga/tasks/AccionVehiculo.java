@@ -2,6 +2,7 @@ package co.com.colcomercio.siga.tasks;
 
 import co.com.colcomercio.siga.interactions.ClickOnElement;
 import co.com.colcomercio.siga.interactions.Wait;
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -20,9 +21,10 @@ public class AccionVehiculo implements Task {
     }
 
     @Override
+    @Step("Seleccionando accion")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(BUTTON_TUERCA, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                Wait.withDuration(5),
                 ClickOnElement.on(BUTTON_TUERCA),
                 ClickOnElement.on(SELECT_OPCIONES_TUERCA.of(accion)),
                 Wait.withDuration(MICRO_TIME)

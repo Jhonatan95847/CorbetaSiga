@@ -16,6 +16,8 @@ import static co.com.colcomercio.siga.userinterfaces.EstadoEntregaPage.BUTTON_CO
 import static co.com.colcomercio.siga.userinterfaces.ProcesarEjecucionPage.*;
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.BUTTON_CERRAR_POPUP;
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.IFRAME_DOS;
+import static co.com.colcomercio.siga.utils.Constantes.MOTIVO_DETENCION;
+import static co.com.colcomercio.siga.utils.Constantes.TECNICO_TALLER;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
 import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
@@ -25,11 +27,12 @@ public class CrearNovedadTP implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Wait.withDuration(MICRO_TIME),
+                WaitUntil.the(IFRAME_DOS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                Wait.withDuration(MICRO_TIME),
                 SwitchIframe.to(IFRAME_DOS),
-                WaitUntil.the(TEXTBOX_AGREGAR_TECICO, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 Wait.withDuration(MICRO_TIME),
                 ClickOnElement.on(TEXTBOX_AGREGAR_TECICO),
-                EnterText.intoField("Torres Jorge",TEXTBOX_AGREGAR_TECICO),
+                EnterText.intoField(TECNICO_TALLER,TEXTBOX_AGREGAR_TECICO),
                 Hit.the(Keys.ENTER).into(TEXTBOX_AGREGAR_TECICO),
                 ClickOnElement.on(TAP_PARTES),
                 WaitUntil.the(SELECT_COTIZACION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
@@ -46,17 +49,18 @@ public class CrearNovedadTP implements Task {
                 ClickOnElement.on(BUTTON_CONSULTAR_DESCUENTO),
                 WaitUntil.the(BUTTON_CREAR_NOVEDAD_TP, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 Wait.withDuration(5),
+                ScrollToElement.to(BUTTON_CREAR_NOVEDAD_TP),
                 ClickOnElement.on(BUTTON_CREAR_NOVEDAD_TP),
-                Wait.withDuration(3),
+                Wait.withDuration(5),
                 Switch.toDefaultContext(),
                 ClickOnElement.on(BUTTON_CONFIRMAR),
                 Wait.withDuration(3),
                 GetText.ofElement(TEXTO_NUMERO_NOVEDADTP,"NovedadTP"),
                 JavaScriptClick.on(BUTTON_CERRAR_POPUP),
+                WaitUntil.the(IFRAME_DOS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 SwitchIframe.to(IFRAME_DOS),
-                WaitUntil.the(TEXTBOX_MOTIVO_DETENCION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(TEXTBOX_MOTIVO_DETENCION),
-                EnterText.intoField("fin de jornada",TEXTBOX_MOTIVO_DETENCION),
+                EnterText.intoField(MOTIVO_DETENCION,TEXTBOX_MOTIVO_DETENCION),
                 Wait.withDuration(3),
                 Hit.the(Keys.ARROW_DOWN).into(TEXTBOX_MOTIVO_DETENCION),
                 Hit.the(Keys.ENTER).into(TEXTBOX_MOTIVO_DETENCION),

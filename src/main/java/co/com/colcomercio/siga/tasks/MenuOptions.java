@@ -2,6 +2,7 @@ package co.com.colcomercio.siga.tasks;
 
 import co.com.colcomercio.siga.interactions.ClickOnElement;
 import co.com.colcomercio.siga.interactions.Wait;
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -25,11 +26,11 @@ public class MenuOptions implements Task {
     }
 
     @Override
+    @Step("Seleccionando la opcion del menu")
     public <T extends Actor> void performAs(T actor) {
         logger.info("#########################SELECCIONANDO LA OPCION EN EL MENU#########################");
         actor.attemptsTo(
                 Wait.withDuration(MICRO_TIME),
-                WaitUntil.the(BUTTON_MENU, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_MENU),
                 ClickOnElement.on(MENU_OPTION.of(menu)),
                 ClickOnElement.on(SUBMENU_OPTION.of(subMenu))

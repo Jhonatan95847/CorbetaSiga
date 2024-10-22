@@ -28,7 +28,6 @@ public class AgregarPartes implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(TEXTBOX_TIPO_DE_ORDEN.of(position), isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 Wait.withDuration(MICRO_TIME),
                 ClickOnElement.on(TEXTBOX_TIPO_DE_ORDEN.of(position)),
                 Wait.withDuration(MICRO_TIME),

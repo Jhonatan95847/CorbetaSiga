@@ -21,15 +21,15 @@ public class EditarYValidarNovedadTP implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 ClickOnElement.on(BUTTON_EDITAR_VALIDAR),
+                WaitUntil.the(IFRAME_REGISTRAR_RECEPCION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 SwitchIframe.to(IFRAME_REGISTRAR_RECEPCION),
-                WaitUntil.the(BUTTON_PARTES, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 ClickOnElement.on(BUTTON_PARTES),
                 WaitUntil.the(BUTTON_CONTINUAR_DESCUENTOS_COMPROMETIDOS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 Wait.withDuration(5),
                 ScrollToElement.to(BUTTON_CONTINUAR_DESCUENTOS_COMPROMETIDOS),
                 ClickOnElement.on(BUTTON_CONTINUAR_DESCUENTOS_COMPROMETIDOS),
                 WaitUntil.the(BUTTON_EDITAR_VALIDAR_FINAL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                Wait.withDuration(5),
+                Wait.withDuration(10),
                 ScrollToElement.to(BUTTON_EDITAR_VALIDAR_FINAL),
                 ClickOnElement.on(BUTTON_EDITAR_VALIDAR_FINAL),
                 Switch.toDefaultContext(),

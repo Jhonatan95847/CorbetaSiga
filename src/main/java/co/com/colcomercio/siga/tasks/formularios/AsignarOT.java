@@ -26,10 +26,9 @@ public class AsignarOT implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("#####################################ASIGNAR ORDEN DE TRABAJO########################");
         actor.attemptsTo(
-                Wait.withDuration(MICRO_TIME),
+                Wait.withDuration(5),
+                WaitUntil.the(IFRAME_REGISTRAR_RECEPCION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 SwitchIframe.to(IFRAME_REGISTRAR_RECEPCION),
-                WaitUntil.the(SCROLL, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
-                ScrollToElement.to(SCROLL),
                 Wait.withDuration(MICRO_TIME),
                 DefineWorkCell.on("CELDA DOS", "23:30", "00:00"),
                 Wait.withDuration(MICRO_TIME),
