@@ -24,6 +24,7 @@ public class EditarYValidarNovedadTP implements Task {
                 WaitUntil.the(IFRAME_REGISTRAR_RECEPCION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 SwitchIframe.to(IFRAME_REGISTRAR_RECEPCION),
                 ClickOnElement.on(BUTTON_PARTES),
+                ClickOnElement.on(BUTTON_PARTES),
                 WaitUntil.the(BUTTON_CONTINUAR_DESCUENTOS_COMPROMETIDOS, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 Wait.withDuration(5),
                 ScrollToElement.to(BUTTON_CONTINUAR_DESCUENTOS_COMPROMETIDOS),

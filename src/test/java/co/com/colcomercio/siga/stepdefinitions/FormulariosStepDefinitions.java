@@ -1,16 +1,20 @@
 package co.com.colcomercio.siga.stepdefinitions;
 
 
+import co.com.colcomercio.siga.models.users.Negocio;
 import co.com.colcomercio.siga.tasks.formularios.*;
+import co.com.colcomercio.siga.utils.GetDataModel;
 import io.cucumber.java.es.Y;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
 public class FormulariosStepDefinitions {
-    @Y("diligencia el formulario de Registrar Recepcion con cambio de propietario")
-    public void queUnAsesorPqrDeseaAccederAlCrmAlkomprar() {
+    private Negocio dataNegocio;
+    @Y("diligencia el formulario de Registrar Recepcion en taller {string} con cambio de propietario")
+    public void queUnAsesorPqrDeseaAccederAlCrmAlkomprar(String data) {
+        dataNegocio = GetDataModel.negocio(data);
         theActorCalled("actor").wasAbleTo(
-                RegistrarRecepcion.registrar()
+                RegistrarRecepcion.registrar(dataNegocio)
         );
     }
 
@@ -21,10 +25,11 @@ public class FormulariosStepDefinitions {
         );
     }
 
-    @Y("diligencia el formulario de asignar solicitud")
-    public void diligenciaElFormularioDeAsignarSolicitud() {
+    @Y("diligencia el formulario de asignar solicitud para taller {string}")
+    public void diligenciaElFormularioDeAsignarSolicitud(String data) {
+        dataNegocio = GetDataModel.negocio(data);
         theActorCalled("actor").wasAbleTo(
-                AsignarOT.asignar()
+                AsignarOT.asignar(dataNegocio)
         );
     }
 
@@ -35,10 +40,11 @@ public class FormulariosStepDefinitions {
         );
     }
 
-    @Y("diligencio el formulario agregando los detalles y creo la novedad TP")
-    public void diligencioElFormularioAgregandoLosDetallesYCreoLaNovedadTP() {
+    @Y("diligencio el formulario agregando los detalles y creo la novedad TP para {string}")
+    public void diligencioElFormularioAgregandoLosDetallesYCreoLaNovedadTP(String data) {
+        dataNegocio = GetDataModel.negocio(data);
         theActorCalled("actor").wasAbleTo(
-                CrearNovedadTP.crear()
+                CrearNovedadTP.crear(dataNegocio)
         );
     }
 
@@ -46,6 +52,14 @@ public class FormulariosStepDefinitions {
     public void editaYVlaidaLaNovedadTP() {
         theActorCalled("actor").wasAbleTo(
                 EditarYValidarNovedadTP.editar()
+        );
+    }
+
+    @Y("diligencia el formulario de Registrar Recepcion akt con cambio de propietario")
+    public void diligenciaElFormularioDeRegistrarRecepcionAktConCambioDePropietario() {
+        dataNegocio = GetDataModel.negocio("corautos_administra_precios");
+        theActorCalled("actor").wasAbleTo(
+                RegistrarRecepcionAkt.registrar(dataNegocio)
         );
     }
 }

@@ -28,7 +28,7 @@ public class CommonStepdefinitions {
         logger.info("***********************************************************************************************************");
         OnStage.setTheStage(new OnlineCast());
         theActorCalled("actor").wasAbleTo(
-                ConsultaChasisEntregado.consulta()
+                //ConsultaChasisEntregado.consulta()
         );
     }
 

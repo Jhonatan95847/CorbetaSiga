@@ -17,6 +17,7 @@ public class RegistrarRecepcionPage extends PageObject {
 
     //Datos vehiculo
     public static final Target TEXTBOX_TALLER =Target.the("Campo de texto taller").located(By.xpath("//div[@id=\"ddlTallerId_chosen\"]//input"));
+    public static final Target BUTTON_CERRAR_ADVERTENCIA =Target.the("Boton cerrar advertencia").located(By.xpath("//button[@class=\"btn-close\"]"));
     public static final Target TEXTBOX_PLACA =Target.the("Campo de texto placa").located(By.xpath("//input[@name=\"ctl00$cprPrincipal$tbxVehiculoPlaca\"]"));
     public static final Target TEXTBOX_TALLER_CLICK =Target.the("Campo de texto taller click").located(By.xpath("//div[@id=\"ddlTallerId_chosen\"]"));
     public static final Target TEXTBOX_KILOMETRAJE =Target.the("Campo de texto kilometraje").located(By.xpath("//input[@id=\"tbxRecepcionVehiculoTallerKilometrajeActual\"]"));
@@ -27,6 +28,7 @@ public class RegistrarRecepcionPage extends PageObject {
     public static final Target BUTTON_AGREGAR_CLIENTE =Target.the("Boton agregar cliente").located(By.xpath("//a[@id=\"lbnClienteId\"]"));
     public static final Target TEXTBOX_NOMBRE =Target.the("Campo de texto nombre").located(By.xpath("//input[@name=\"ctl00$cprBusqueda$tbxClienteNombres\"]"));
     public static final Target CHECKBOX_AUTOGRUAS =Target.the("Check box autogruas").located(By.xpath("(//input[@id=\"cbxSeleccionar\"])[2]"));
+    public static final Target CHECKBOX_PRIMER_RESULTADO =Target.the("Check box autogruas").located(By.xpath("(//input[@id=\"cbxSeleccionar\"])[1]"));
     public static final Target BUTTON_AGREGAR =Target.the("Boton Agregar").located(By.xpath("//button[@id=\"btnAdicionarSeleccion\"]"));
     public static final Target TEXTBOX_NOMBRE_VALIDAR =Target.the("Campo de texto validar si ya esta autogruas").located(By.xpath("//input[@value=\"AUTOGRUAS DE\"]"));
     //fecha registro recepcion
@@ -34,6 +36,10 @@ public class RegistrarRecepcionPage extends PageObject {
     public static final Target TEXTBOX_CONDICION =Target.the("Campo de texto Condicion").located(By.xpath("//textarea[@id=\"tbxRecepcionVehiculoTallerObservaciones\"]"));
     //Datos del conductor
     public static final Target CHECK_MISMO_PROPIETARIO =Target.the("Check mismo propietario").located(By.xpath("//input[@id=\"cprPrincipal_cbxMismoPropietario\"]"));
+    //aceite akt
+    public static final Target SELECT_ACEITE_AKT =Target.the("Select aceite akt").located(By.xpath("//select[@id=\"ddlIncluyeCambioAceite\"]"));
+    public static final Target COLOR =Target.the("Costo aceite akt").located(By.xpath("//label[@for=\"tbxColorId\"]"));
+
 
 
 }

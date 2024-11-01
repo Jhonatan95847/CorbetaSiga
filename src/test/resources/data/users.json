@@ -10,7 +10,7 @@
     "key" : "tecnico_taller",
     "dataUsers": {
       "user" : "851016",
-      "password" : "Siga2023*"
+      "password" : "Siga2024*"
     }
   },
   {
@@ -23,8 +23,8 @@
   {
     "key" : "validador",
     "dataUsers": {
-      "user" : "186474",
-      "password" : "Siga2023*"
+      "user" : "Validador24",
+      "password" : "Siga2024*"
     }
   }
 ]

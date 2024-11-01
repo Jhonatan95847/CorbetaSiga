@@ -12,5 +12,7 @@ public class LoginPage extends PageObject {
     //////////////////////////////////////////////
     public static final Target SELECT_UNIDAD_NEGOCIO =Target.the("Select unidad de negocio").located(By.xpath("//select[@name=\"ctl00$ddlUnidadNegocioId\"]"));
     public static final Target BUTTON_CERRAR_SESION =Target.the("Boton cerrar sesion").located(By.xpath("//span[contains(text(),'Cerrar sesión')]"));
+    public static final Target TEXT_CORAUTOS =Target.the("Texto corautos").located(By.xpath("//select[@name=\"ctl00$ddlUnidadNegocioId\"]//option[@selected=\"selected\" and @value=\"2\"]"));
+    public static final Target TEXT_AKT =Target.the("Texto akt").located(By.xpath("//select[@name=\"ctl00$ddlUnidadNegocioId\"]//option[@selected=\"selected\" and @value=\"1\"]"));
 
 }

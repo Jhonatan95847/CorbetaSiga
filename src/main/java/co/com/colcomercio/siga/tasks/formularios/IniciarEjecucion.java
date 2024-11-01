@@ -37,6 +37,7 @@ public class IniciarEjecucion implements Task {
                 WaitUntil.the(IFRAME_REGISTRAR_RECEPCION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                 Wait.withDuration(MICRO_TIME),
                 SwitchIframe.to(IFRAME_REGISTRAR_RECEPCION),
+                Wait.withDuration(MICRO_TIME),
                 ClickOnElement.on(BUTTON_EJECUTAR_ACCION),
                 ClickOnElement.on(BUTTON_SELECT_CREAR_NOVEDAD_TP.of(accion)),
                 Wait.withDuration(MICRO_TIME),
