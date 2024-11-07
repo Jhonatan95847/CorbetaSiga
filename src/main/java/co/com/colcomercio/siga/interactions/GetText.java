@@ -28,7 +28,7 @@ public class GetText implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         String texto = Text.of(elemento).answeredBy(actor);
         logger.info("El valor elemto es " + texto);
-        GuardarDatoEnJson.guardarDatoEnJson(key+idKey,texto,"C:\\Users\\1049644474\\Documents\\Automatizacion\\Baseautomatizacion\\siga-testing-qa\\src\\ot.json");
+        GuardarDatoEnJson.guardarDatoEnJson(key+idKey,texto,"C:\\Users\\Testqa\\Desktop\\GenerarOTSiga\\CorbetaSiga\\src\\ot.json");
     }
 
     public static GetText ofElement(Target elemento, String key) {
