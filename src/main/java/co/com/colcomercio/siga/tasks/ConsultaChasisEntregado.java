@@ -41,7 +41,7 @@ public class ConsultaChasisEntregado implements Task {
         );
         String queryResult = actor.recall("queryResult");
         logger.info("=============El resultado de la consulta es: "+queryResult);
-        GuardarDatoEnJson.guardarDatoEnJson("serieChasis"+idKey,queryResult,"C:\\Users\\1049644474\\Documents\\Automatizacion\\Baseautomatizacion\\siga-testing-qa\\src\\ot.json");
+        GuardarDatoEnJson.guardarDatoEnJson("serieChasis"+idKey,queryResult,"C:\\Users\\Testqa\\Desktop\\GenerarOTSiga\\CorbetaSiga\\src\\ot.json");
     }
     public static ConsultaChasisEntregado consulta(String negocio){return Tasks.instrumented(ConsultaChasisEntregado.class, negocio);
     }
