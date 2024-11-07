@@ -87,6 +87,14 @@ dependencies {
 
 }
 
+serenity {
+    // Specify the root package of any JUnit acceptance tests to appear in the Serenity report
+    testRoot = "src/test/java"
+    // Specify the root directory of any Cucumber feature files
+    requirementsDir = "src/test/resources/features"
+}
+
+
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
@@ -97,9 +105,6 @@ configurations {
     }
 }
 
-serenity {
-    reports = ["single-page-html"]
-}
 
 tasks.withType(Test).configureEach {
     useJUnitPlatform {
