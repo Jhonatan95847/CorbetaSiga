@@ -6,6 +6,7 @@ import co.com.colcomercio.siga.interactions.RegistrarRecepcion.DatosVehiculo;
 import co.com.colcomercio.siga.interactions.RegistrarRecepcion.FechaRegistro;
 import co.com.colcomercio.siga.interactions.ScrollToElement;
 import co.com.colcomercio.siga.interactions.Wait;
+import co.com.colcomercio.siga.models.users.Negocio;
 import co.com.colcomercio.siga.utils.SwitchIframe;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -14,6 +15,7 @@ import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.htmlunit.xpath.operations.Neg;
 
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.*;
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.CHECK_MISMO_PROPIETARIO;
@@ -23,12 +25,18 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class RegistrarRecepcion implements Task {
     private static final Logger logger = LogManager.getLogger(RegistrarRecepcion.class);
+    private final Negocio negocio;
+
+    public RegistrarRecepcion(Negocio negocio) {
+        this.negocio = negocio;
+    }
+
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         logger.info("#################DILIGENCIANDO FORMULARIO REGISTRAR RECEPCION###############");
         actor.attemptsTo(
-                DatosVehiculo.addData(),
+                DatosVehiculo.addData(negocio, "corautos"),
                 Wait.withDuration(MICRO_TIME)
         );
         if (TEXTBOX_NOMBRE_VALIDAR.isVisibleFor(actor)) {
@@ -37,7 +45,7 @@ public class RegistrarRecepcion implements Task {
             );
         }else {
             actor.attemptsTo(
-                    CambiarPropietario.cambiar(),
+                    CambiarPropietario.cambiar(negocio),
                     Switch.toDefaultContext(),
                     WaitUntil.the(IFRAME_REGISTRAR_RECEPCION, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
                     SwitchIframe.to(IFRAME_REGISTRAR_RECEPCION),
@@ -55,6 +63,6 @@ public class RegistrarRecepcion implements Task {
                 ClickOnElement.on(BUTTON_CONFIRMAR)
         );
     }
-    public static RegistrarRecepcion registrar(){return Tasks.instrumented(RegistrarRecepcion.class);
+    public static RegistrarRecepcion registrar(Negocio negocio){return Tasks.instrumented(RegistrarRecepcion.class, negocio);
     }
 }

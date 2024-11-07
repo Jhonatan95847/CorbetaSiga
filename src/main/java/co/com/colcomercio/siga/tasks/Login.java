@@ -33,6 +33,7 @@ public class Login implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("################################INICIANDO SE SESION EN SIGA##############################");
         actor.attemptsTo(
+                Wait.withDuration(MICRO_TIME),
                 EnterText.intoField(users.getDataUsers().getUser(),TEXTBOX_USER),
                 EnterText.intoField(users.getDataUsers().getPassword(),TEXTBOX_PASS),
                 ClickOnElement.on(BUTTON_LOGIN),

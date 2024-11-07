@@ -1,0 +1,54 @@
+[
+  {
+    "key" : "fofat",
+    "dataNegocio": {
+      "cliente" : "AUTOGRUAS",
+      "taller" : "fofat",
+      "celda" : "CELDA DOS",
+      "repuesto" : "7701023225502",
+      "sustituto" : "7701023453509",
+      "servicio" : "7701023513296",
+      "rutina" : "7701023154703",
+      "tecnico" : "torres jorge"
+    }
+  },
+  {
+    "key" : "vwmed",
+    "dataNegocio": {
+      "cliente" : "AUTOGRUAS",
+      "taller" : "vwmed",
+      "celda" : "CELDAQA-ALEJANDRO",
+      "repuesto" : "7701023524841",
+      "sustituto" : "7701023453509",
+      "servicio" : "7701023513296",
+      "rutina" : "7705946316361",
+      "tecnico" : "torres jorge"
+    }
+  },
+  {
+    "key" : "akt_administra_precios",
+    "dataNegocio": {
+      "cliente" : "ORGANICA CONSTRUCCIONES",
+      "taller" : "AKT Venecia",
+      "celda" : "PUESTO DE TRABAJO 2",
+      "repuesto" : "7701023036603",
+      "sustituto" : "7701023889896",
+      "servicio" : "7705946327848",
+      "repuestoDos" : "7701023436878",
+      "tecnico" : "towers"
+    }
+  },
+  {
+    "key" : "akt_no_administra_precios",
+    "dataNegocio": {
+      "cliente" : "ORGANICA CONSTRUCCIONES",
+      "taller" : "AKT Boyac",
+      "celda" : "PUESTO DE TRABAJO 2",
+      "repuesto" : "7701023036603",
+      "sustituto" : "7701023889896",
+      "servicio" : "7705946327848",
+      "repuestoDos" : "7701023436878",
+      "tecnico" : "towers"
+    }
+  }
+]
