@@ -30,7 +30,7 @@ public class AccionVehiculo implements Task {
             );
         }
         actor.attemptsTo(
-                Wait.withDuration(5),
+                Wait.withDuration(7),
                 ClickOnElement.on(BUTTON_TUERCA),
                 ClickOnElement.on(SELECT_OPCIONES_TUERCA.of(accion)),
                 Wait.withDuration(MICRO_TIME)

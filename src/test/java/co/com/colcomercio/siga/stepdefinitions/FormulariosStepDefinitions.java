@@ -57,7 +57,7 @@ public class FormulariosStepDefinitions {
 
     @Y("diligencia el formulario de Registrar Recepcion akt con cambio de propietario")
     public void diligenciaElFormularioDeRegistrarRecepcionAktConCambioDePropietario() {
-        dataNegocio = GetDataModel.negocio("corautos_administra_precios");
+        dataNegocio = GetDataModel.negocio("akt_no_administra_precios");
         theActorCalled("actor").wasAbleTo(
                 RegistrarRecepcionAkt.registrar(dataNegocio)
         );

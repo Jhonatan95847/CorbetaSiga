@@ -39,7 +39,7 @@ public class RegistrarRecepcionAkt implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("#################DILIGENCIANDO FORMULARIO REGISTRAR RECEPCION###############");
         actor.attemptsTo(
-                DatosVehiculo.addData(negocio, "corautos"),
+                DatosVehiculo.addData(negocio, "akt"),
                 Wait.withDuration(MICRO_TIME)
         );
         if (TEXTBOX_NOMBRE_VALIDAR.isVisibleFor(actor)) {

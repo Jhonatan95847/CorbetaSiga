@@ -13,6 +13,8 @@ public class DataNegocio {
     private String repuesto;
     private String sustituto;
     private String servicio;
+    private String rutina;
     private String tecnico;
+    private String repuestoDos;
 
 }

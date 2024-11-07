@@ -44,13 +44,19 @@ public class AgregarPartes implements Interaction {
         );
         if (tipoParte.equals("Servicio")){
             actor.attemptsTo(
-                    Wait.withDuration(MICRO_TIME),
+                    Wait.withDuration(5),
                     EnterText.intoField(cantidad,TEXTBOX_CANTIDAD_SERVICIO.of(position)),
                     Wait.withDuration(MICRO_TIME)
             );
-        }else{
+        } else if (tipoParte.equals("Rutina")){
             actor.attemptsTo(
-                    Wait.withDuration(MICRO_TIME),
+                    Wait.withDuration(5),
+                    EnterText.intoField(cantidad,TEXTBOX_CANTIDAD_SERVICIO.of(position)),
+                    Wait.withDuration(MICRO_TIME)
+            );
+        } else{
+            actor.attemptsTo(
+                    Wait.withDuration(5),
                     EnterText.intoField(cantidad,TEXTBOX_CANTIDAD.of(position)),
                     Wait.withDuration(MICRO_TIME)
             );

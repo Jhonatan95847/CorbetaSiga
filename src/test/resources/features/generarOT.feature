@@ -42,7 +42,7 @@ Característica: Generar OT
     Dado que el usuario inicia sesion como "recepcionista" para "CORAUTOS"
     Y en el menu selecciona "Vehículos" y el submenu "Vehículo"
     Cuando el usuario busca el chasis para el caso y selecciona la accion "Registrar Recepción"
-    Y diligencia el formulario de Registrar Recepcion con cambio de propietario para "vwmed"
+    Y diligencia el formulario de Registrar Recepcion en taller "vwmed" con cambio de propietario
     Y llena el formulario de Registar orden de trabajo
     Entonces Genera el numero de la otden de trabajo
 
@@ -50,7 +50,7 @@ Característica: Generar OT
     Dado que el usuario inicia sesion como "jefe_taller" para "CORAUTOS"
     Y en el menu selecciona "Taller" y el submenu "Orden de Trabajo"
     Cuando el usuario busca la OT para el caso y selecciona la accion "Asignar OT a Celda"
-    Y diligencia el formulario de asignar solicitud para "vwmed"
+    Y diligencia el formulario de asignar solicitud para taller "vwmed"
     Entonces la orden de trabajo pasa a estado En ejecucion
 
     Dado que el usuario inicia sesion como "tecnico_taller" para "CORAUTOS"
@@ -79,14 +79,14 @@ Característica: Generar OT
     Dado que el usuario inicia sesion como "jefe_taller" para "AKT"
     Y en el menu selecciona "Taller" y el submenu "Orden de Trabajo"
     Cuando el usuario busca la OT para el caso y selecciona la accion "Asignar OT a Celda"
-    Y diligencia el formulario de asignar solicitud para "akt_administra_precios"
+    Y diligencia el formulario de asignar solicitud para taller "akt_no_administra_precios"
     Entonces la orden de trabajo pasa a estado En ejecucion
 
     Dado que el usuario inicia sesion como "tecnico_taller" para "AKT"
     Y en el menu selecciona "Taller" y el submenu "Ejecución Orden Trabajo"
     Cuando el usuario busca el chasis para el caso y selecciona la accion "Procesar Ejecución"
     Y ejecuto la accion "Crear Novedad TP"
-    Y diligencio el formulario agregando los detalles y creo la novedad TP para "akt_administra_precios"
+    Y diligencio el formulario agregando los detalles y creo la novedad TP para "akt_no_administra_precios"
     Entonces se crea la novedad TP
 
     #Dado que el usuario inicia en siga sesion como "validador" Corautos
