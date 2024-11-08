@@ -8,6 +8,7 @@ import lombok.Setter;
 
 public class DataNegocio {
     private String cliente;
+    private String clienteApellido;
     private String taller;
     private String celda;
     private String repuesto;

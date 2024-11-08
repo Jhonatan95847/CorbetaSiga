@@ -14,7 +14,6 @@ import org.apache.logging.log4j.Logger;
 
 
 import static co.com.colcomercio.siga.userinterfaces.AsignarSolicitud.*;
-import static co.com.colcomercio.siga.userinterfaces.OpcionesTuercaPage.TEXT_ORDEN_TRABAJO;
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.BUTTON_CONFIRMAR;
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.IFRAME_REGISTRAR_RECEPCION;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;

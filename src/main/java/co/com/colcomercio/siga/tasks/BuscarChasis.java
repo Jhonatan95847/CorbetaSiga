@@ -6,14 +6,11 @@ import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static co.com.colcomercio.siga.userinterfaces.BusquedaVehiculoPage.BUTTON_BUSCAR_VEHICULO;
 import static co.com.colcomercio.siga.userinterfaces.BusquedaVehiculoPage.TEXTBOX_SERIE_CHASIS;
-import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class BuscarChasis implements Task {
     private static final Logger logger = LogManager.getLogger(BuscarChasis.class);

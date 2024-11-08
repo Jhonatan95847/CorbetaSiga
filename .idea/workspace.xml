@@ -4,20 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f4f3e5-81f8-42e6-9946-44a6a5d85ab2" name="Changes" comment="Ajustes de la data de orueba desde json para distintos talleres y los dos negocios, OTs de AKT, ajustes de tiempos">
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/DragAndDropWithJS.java" beforeDir="false" />
+    <list default="true" id="f4f4f3e5-81f8-42e6-9946-44a6a5d85ab2" name="Changes" comment="agregar serenity.properties">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/AgregarPartes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/AgregarPartes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/ClickOnElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/ClickOnElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/EnterByDigit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/DatosConductor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/SimularArrastreConJS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/GetText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/GetText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/CambiarPropietario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/CambiarPropietario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/DatosVehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/RegistrarRecepcion/DatosVehiculo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/interactions/ScrollVertically.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/models/users/DataNegocio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/models/users/DataNegocio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/AccionVehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/AccionVehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/BuscarOT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/BuscarOT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/ConsultaChasisEntregado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/ConsultaChasisEntregado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/utils/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/utils/Constantes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/MenuOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/MenuOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/CrearNovedadTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/CrearNovedadTP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/IniciarEjecucion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/IniciarEjecucion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/RegistrarRecepcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/tasks/formularios/RegistrarRecepcion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/userinterfaces/RegistrarRecepcionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/userinterfaces/RegistrarRecepcionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/utils/ConsultasSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/utils/ConsultasSQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/siga/utils/EjecutarConsultaSQL.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ot.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/siga/stepdefinitions/FormulariosStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/siga/stepdefinitions/FormulariosStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/data/negocio.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/negocio.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/generarOT.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/generarOT.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/serenity.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/serenity.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +42,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -71,21 +84,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.LoginRunner.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "SIGAOT",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/1049644474/Documents/Automatizacion/Baseautomatizacion/financiero-testing-qa",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.LoginRunner.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SIGAOT&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/1049644474/Documents/Automatizacion/eComerce/AutomatizacionEstable/Alkosto/sap-testing-alkosto&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\1049644474\Documents\Automatizacion\Baseautomatizacion\siga-testing-qa\src\test\resources\drivers" />
@@ -94,6 +107,37 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="co.com.colcomercio.siga.utils" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LoginRunner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;co.com.colcomercio.siga.runners.LoginRunner&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.LoginRunner" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -159,7 +203,71 @@
       <option name="project" value="LOCAL" />
       <updated>1730494763325</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ajustes de tiempos y coneccion a base de datos qa para ejecucion desde servidor">
+      <option name="closed" value="true" />
+      <created>1730994450747</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730994450747</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Ajustes de tiempos y coneccion a base de datos qa para ejecucion desde servidor">
+      <option name="closed" value="true" />
+      <created>1730994482228</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730994482228</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Ajustes de tiempos y coneccion a base de datos qa para ejecucion desde servidor">
+      <option name="closed" value="true" />
+      <created>1730994614371</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730994614371</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Ajustes de tiempos y coneccion a base de datos qa para ejecucion desde servidor">
+      <option name="closed" value="true" />
+      <created>1730994706062</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730994706062</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Ajustes de tiempos y coneccion a base de datos qa para ejecucion desde servidor">
+      <option name="closed" value="true" />
+      <created>1730994874971</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730994874971</updated>
+    </task>
+    <task id="LOCAL-00012" summary="direccion de json para server">
+      <option name="closed" value="true" />
+      <created>1730997744163</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1730997744163</updated>
+    </task>
+    <task id="LOCAL-00013" summary="direccion de json para server">
+      <option name="closed" value="true" />
+      <created>1730997791756</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1730997791756</updated>
+    </task>
+    <task id="LOCAL-00014" summary="agregar serenity.properties">
+      <option name="closed" value="true" />
+      <created>1731012949354</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731012949354</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,6 +288,9 @@
     <MESSAGE value="Consulta de chasis por BD, obteb¿ner texto y guardar en archivo json, tarea para agregar partes" />
     <MESSAGE value="Ajustes de tiempos de espera" />
     <MESSAGE value="Ajustes de la data de orueba desde json para distintos talleres y los dos negocios, OTs de AKT, ajustes de tiempos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustes de la data de orueba desde json para distintos talleres y los dos negocios, OTs de AKT, ajustes de tiempos" />
+    <MESSAGE value="Ajustes de tiempos y coneccion a base de datos qa para ejecucion desde servidor" />
+    <MESSAGE value="direccion de json para server" />
+    <MESSAGE value="agregar serenity.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="agregar serenity.properties" />
   </component>
 </project>

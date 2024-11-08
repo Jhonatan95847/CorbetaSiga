@@ -9,8 +9,8 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static co.com.colcomercio.siga.userinterfaces.EstadoEntregaPage.BUTTON_CONFIRMAR;
 import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 
@@ -33,6 +33,7 @@ public class ClickOnElement implements Interaction {
             logger.info("Hacer click en: " + element);
             actor.attemptsTo(
                     WaitUntil.the(element, isVisible()).forNoMoreThan(LOW_TIME).seconds(),
+                    WaitUntil.the(element, isEnabled()).forNoMoreThan(LOW_TIME).seconds(),
                     Click.on(element)
             );
         } else {

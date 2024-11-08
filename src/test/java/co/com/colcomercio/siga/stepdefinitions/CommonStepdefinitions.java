@@ -2,7 +2,6 @@ package co.com.colcomercio.siga.stepdefinitions;
 
 
 import co.com.colcomercio.siga.models.users.Users;
-import co.com.colcomercio.siga.tasks.ConsultaChasisEntregado;
 import co.com.colcomercio.siga.tasks.Login;
 import co.com.colcomercio.siga.tasks.LoginValidador;
 import co.com.colcomercio.siga.utils.GetDataModel;

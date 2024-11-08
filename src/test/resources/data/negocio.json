@@ -2,7 +2,8 @@
   {
     "key" : "fofat",
     "dataNegocio": {
-      "cliente" : "AUTOGRUAS",
+      "cliente" : "Autogruas",
+      "clienteApellido" : "LTDA INCORPORATED",
       "taller" : "fofat",
       "celda" : "CELDA DOS",
       "repuesto" : "7701023225502",
@@ -15,7 +16,8 @@
   {
     "key" : "vwmed",
     "dataNegocio": {
-      "cliente" : "AUTOGRUAS",
+      "cliente" : "Autogruas",
+      "clienteApellido" : "LTDA INCORPORATED",
       "taller" : "vwmed",
       "celda" : "CELDAQA-ALEJANDRO",
       "repuesto" : "7701023524841",
@@ -26,9 +28,10 @@
     }
   },
   {
-    "key" : "akt_administra_precios",
+    "key" : "Venecia",
     "dataNegocio": {
       "cliente" : "ORGANICA CONSTRUCCIONES",
+      "clienteApellido" : "BIOCLIMATICASSAS QA",
       "taller" : "AKT Venecia",
       "celda" : "PUESTO DE TRABAJO 2",
       "repuesto" : "7701023036603",
@@ -39,9 +42,10 @@
     }
   },
   {
-    "key" : "akt_no_administra_precios",
+    "key" : "Boyaca",
     "dataNegocio": {
       "cliente" : "ORGANICA CONSTRUCCIONES",
+      "clienteApellido" : "BIOCLIMATICASSAS QA",
       "taller" : "AKT Boyac",
       "celda" : "PUESTO DE TRABAJO 2",
       "repuesto" : "7701023036603",

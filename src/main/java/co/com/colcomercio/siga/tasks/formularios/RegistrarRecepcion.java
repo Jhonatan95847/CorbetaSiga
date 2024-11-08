@@ -15,7 +15,6 @@ import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.htmlunit.xpath.operations.Neg;
 
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.*;
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.CHECK_MISMO_PROPIETARIO;
@@ -36,8 +35,7 @@ public class RegistrarRecepcion implements Task {
     public <T extends Actor> void performAs(T actor) {
         logger.info("#################DILIGENCIANDO FORMULARIO REGISTRAR RECEPCION###############");
         actor.attemptsTo(
-                DatosVehiculo.addData(negocio, "corautos"),
-                Wait.withDuration(MICRO_TIME)
+                DatosVehiculo.addData(negocio, "corautos")
         );
         if (TEXTBOX_NOMBRE_VALIDAR.isVisibleFor(actor)) {
             actor.attemptsTo(

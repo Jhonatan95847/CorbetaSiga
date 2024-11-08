@@ -27,6 +27,7 @@ public class RegistrarRecepcionPage extends PageObject {
     public static final Target BUTTON_CREAR_REGISTRO =Target.the("Boton Crear registro").located(By.xpath("//div[@class=\"operaciones\"]//button[contains(text(),'Crear Registro')]"));
     public static final Target BUTTON_AGREGAR_CLIENTE =Target.the("Boton agregar cliente").located(By.xpath("//a[@id=\"lbnClienteId\"]"));
     public static final Target TEXTBOX_NOMBRE =Target.the("Campo de texto nombre").located(By.xpath("//input[@name=\"ctl00$cprBusqueda$tbxClienteNombres\"]"));
+    public static final Target TEXTBOX_APELLIDO =Target.the("Campo de texto apellido").located(By.xpath("//input[@name=\"ctl00$cprBusqueda$tbxClienteApellidos\"]"));
     public static final Target CHECKBOX_AUTOGRUAS =Target.the("Check box autogruas").located(By.xpath("(//input[@id=\"cbxSeleccionar\"])[2]"));
     public static final Target CHECKBOX_PRIMER_RESULTADO =Target.the("Check box autogruas").located(By.xpath("(//input[@id=\"cbxSeleccionar\"])[1]"));
     public static final Target BUTTON_AGREGAR =Target.the("Boton Agregar").located(By.xpath("//button[@id=\"btnAdicionarSeleccion\"]"));
