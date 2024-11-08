@@ -30,5 +30,5 @@ public class ConsultasSQL {
             "      INNER JOIN Procesos.Estado\n" +
             "     ON Estado.EstadoId= Estado_Proceso.EstadoId\n" +
             "where marca.UnidadNegocioId=1 and EstadoNombre IN ('entregado')  AND Referencia.ReferenciaNombre like '%TTR%' --Akt \n" +
-            "  order by EjecucionProcesoFechaBloqueo desc";
+            "  order by EjecucionProcesoFechaBloqueo asc";
 }

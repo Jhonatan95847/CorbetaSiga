@@ -7,12 +7,9 @@ import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static co.com.colcomercio.siga.userinterfaces.OpcionesTuercaPage.*;
-import static co.com.colcomercio.siga.utils.WaitingTime.LOW_TIME;
 import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class AccionVehiculo implements Task {
     private final String accion;
@@ -30,7 +27,7 @@ public class AccionVehiculo implements Task {
             );
         }
         actor.attemptsTo(
-                Wait.withDuration(7),
+                Wait.withDuration(5),
                 ClickOnElement.on(BUTTON_TUERCA),
                 ClickOnElement.on(SELECT_OPCIONES_TUERCA.of(accion)),
                 Wait.withDuration(MICRO_TIME)

@@ -42,7 +42,6 @@ public class IniciarEjecucion implements Task {
                 ClickOnElement.on(BUTTON_SELECT_CREAR_NOVEDAD_TP.of(accion)),
                 Wait.withDuration(MICRO_TIME),
                 Switch.toDefaultContext()
-
         );
     }
     public static IniciarEjecucion iniciar(String accion){return Tasks.instrumented(IniciarEjecucion.class, accion);

@@ -60,7 +60,7 @@ public class DatosVehiculo implements Interaction {
         actor.attemptsTo(
                 Clear.field(TEXTBOX_PLACA),
                 Wait.withDuration(MICRO_TIME),
-                EnterText.intoField("UWY"+numeroPlaca,TEXTBOX_PLACA),
+                EnterText.intoField("AWY"+numeroPlaca,TEXTBOX_PLACA),
                 Wait.withDuration(MICRO_TIME),
                 EnterText.intoField(KILOMETRAJE,TEXTBOX_KILOMETRAJE),
                 Wait.withDuration(MICRO_TIME)
@@ -71,7 +71,7 @@ public class DatosVehiculo implements Interaction {
                     ClickOnElement.on(TEXTBOX_HORAS),
                     Wait.withDuration(MICRO_TIME),
                     EnterText.intoField(HORAS,TEXTBOX_HORAS),
-                    Wait.withDuration(5)
+                    Wait.withDuration(MICRO_TIME)
             );
         }
     }

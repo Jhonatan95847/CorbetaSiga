@@ -55,9 +55,9 @@ public class FormulariosStepDefinitions {
         );
     }
 
-    @Y("diligencia el formulario de Registrar Recepcion akt con cambio de propietario")
-    public void diligenciaElFormularioDeRegistrarRecepcionAktConCambioDePropietario() {
-        dataNegocio = GetDataModel.negocio("akt_no_administra_precios");
+    @Y("diligencia el formulario de Registrar Recepcion akt en el taller {string} con cambio de propietario")
+    public void diligenciaElFormularioDeRegistrarRecepcionAktConCambioDePropietario(String data) {
+        dataNegocio = GetDataModel.negocio(data);
         theActorCalled("actor").wasAbleTo(
                 RegistrarRecepcionAkt.registrar(dataNegocio)
         );

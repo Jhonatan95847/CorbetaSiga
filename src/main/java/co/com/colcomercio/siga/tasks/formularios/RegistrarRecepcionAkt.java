@@ -5,7 +5,6 @@ import co.com.colcomercio.siga.interactions.ClickOnElement;
 import co.com.colcomercio.siga.interactions.EnterText;
 import co.com.colcomercio.siga.interactions.RegistrarRecepcion.CambiarPropietario;
 import co.com.colcomercio.siga.interactions.RegistrarRecepcion.DatosVehiculo;
-import co.com.colcomercio.siga.interactions.RegistrarRecepcion.FechaRegistro;
 import co.com.colcomercio.siga.interactions.ScrollToElement;
 import co.com.colcomercio.siga.interactions.Wait;
 import co.com.colcomercio.siga.models.users.Negocio;
@@ -19,7 +18,6 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static co.com.colcomercio.siga.userinterfaces.LoginPage.SELECT_UNIDAD_NEGOCIO;
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.*;
 import static co.com.colcomercio.siga.userinterfaces.RegistrarRecepcionPage.CHECK_MISMO_PROPIETARIO;
 import static co.com.colcomercio.siga.utils.Constantes.CONDICION_VEHICULO;
@@ -28,7 +26,7 @@ import static co.com.colcomercio.siga.utils.WaitingTime.MICRO_TIME;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class RegistrarRecepcionAkt implements Task {
-    private static final Logger logger = LogManager.getLogger(RegistrarRecepcion.class);
+    private static final Logger logger = LogManager.getLogger(RegistrarRecepcionAkt.class);
      private final Negocio negocio;
 
     public RegistrarRecepcionAkt(Negocio negocio) {
