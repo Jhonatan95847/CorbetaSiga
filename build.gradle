@@ -94,6 +94,9 @@ serenity {
     requirementsDir = "src/test/resources/features"
 }
 
+tasks.named('aggregate') {
+    outputs.dir file("target/site/serenity")
+}
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
