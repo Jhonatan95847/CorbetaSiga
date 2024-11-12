@@ -98,6 +98,14 @@ tasks.named('aggregate') {
     outputs.dir file("target/site/serenity")
 }
 
+tasks.named('clearReports') {
+    delete "target/site/serenity" // o "target/site/serenity" según corresponda
+}
+
+tasks.named('clean') {
+    dependsOn 'clearReports'
+}
+
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
