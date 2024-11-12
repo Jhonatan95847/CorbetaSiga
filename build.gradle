@@ -100,6 +100,7 @@ tasks.named('aggregate') {
 
 tasks.named('clearReports') {
     delete "target/site/serenity" // o "target/site/serenity" según corresponda
+    outputs.upToDateWhen { false }
 }
 
 tasks.named('clean') {
@@ -111,6 +112,10 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 configurations {
+    mainSourceElements {
+        canBeConsumed = true
+        canBeResolved = false
+    }
     cucumberRuntime {
         extendsFrom testImplementation
     }
